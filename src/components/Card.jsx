@@ -2,7 +2,7 @@
 const Card = (props)=>{
 
     return(
-        <div className="card" key={props.id}>
+        <div className="card" >
             <h2 className="cardTitle">
                 {props.title || 'title card' }
             </h2>

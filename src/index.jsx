@@ -3,7 +3,7 @@
 // MEMBUAT FUNC COMPONENT REACT
 const App = ()=>{
 
-    const waktu = Date.now()
+    const waktu = new Date().toLocaleDateString()
     const dummyNote = [
         {
             id : 1,
@@ -46,7 +46,7 @@ const App = ()=>{
 
             {dummyNote.map( (e)=>{
                 return(
-                    <Card id={e.id} title={e.title} content={e.content} date={e.date}/>
+                    <Card key={e.id} title={e.title} content={e.content} date={e.date}/>
                 )
             })}
 
