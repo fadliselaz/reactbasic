@@ -3,6 +3,30 @@
 // MEMBUAT FUNC COMPONENT REACT
 const App = ()=>{
 
+    const waktu = Date.now()
+    const dummyNote = [
+        {
+            id : 1,
+            title : 'ini note pertama',
+            content : 'ini adalah note pertama saya..',
+            date : waktu
+        },
+        {
+            id : 2,
+            title : 'ini note kedua',
+            content : 'ini adalah note kedua saya..',
+            date : waktu
+        },
+        {
+            id : 3,
+            title : 'ini note ketiga',
+            content : 'ini adalah note ketiga saya..',
+            date : waktu
+        }
+    ]
+
+
+
     return (
         <>
         <div className="navbar" >
@@ -20,12 +44,11 @@ const App = ()=>{
 
         <div className="container">
 
-            <Card title='card pertama' />
-            <Card />
-            <Card title='judul ketiga' />
-            <Card />
-            <Card />
-            <Card />
+            {dummyNote.map( (e)=>{
+                return(
+                    <Card id={e.id} title={e.title} content={e.content} date={e.date}/>
+                )
+            })}
 
         </div>
 

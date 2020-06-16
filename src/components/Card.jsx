@@ -2,14 +2,17 @@
 const Card = (props)=>{
 
     return(
-        <div className="card">
+        <div className="card" key={props.id}>
             <h2 className="cardTitle">
                 {props.title || 'title card' }
             </h2>
             <hr/>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente dolorum eveniet sint consequatur quam consequuntur ab quidem esse aut illum dolores obcaecati quo accusantium laborum, blanditiis voluptatibus aspernatur ad iusto!
+                {props.content || 'ini adalah default value dari card content..'}
             </p>
+            <small className='date'>
+                {props.date || 'now'}
+            </small>
 
         </div>
     )
