@@ -8,13 +8,13 @@ const App = ()=>{
         {
             id : 1,
             title : 'ini note pertama',
-            content : 'ini adalah note pertama saya..',
+            content : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus totam eos id quam enim vitae, ipsa quos veniam velit ad. Provident officiis tempora deserunt, quis commodi cum! Recusandae, consequatur a.',
             date : waktu
         },
         {
             id : 2,
             title : 'ini note kedua',
-            content : 'ini adalah note kedua saya..',
+            content : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
             date : waktu
         },
         {
