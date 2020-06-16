@@ -20,9 +20,9 @@ const App = ()=>{
 
         <div className="container">
 
-            <Card judul='card pertama' />
+            <Card title='card pertama' />
             <Card />
-            <Card />
+            <Card title='judul ketiga' />
             <Card />
             <Card />
             <Card />

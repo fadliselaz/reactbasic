@@ -4,7 +4,7 @@ const Card = (props)=>{
     return(
         <div className="card">
             <h2 className="cardTitle">
-                {props.judul || 'title card' }
+                {props.title || 'title card' }
             </h2>
             <hr/>
             <p>
