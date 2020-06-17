@@ -22,7 +22,7 @@ const MenuItem = (props)=>{
         }  }>
 
             <a href={props.to}>
-                {props.menuName} {tc}
+                {props.menuName} &nbsp; {tc}
             </a>
         </div>
     )
