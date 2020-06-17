@@ -57,13 +57,12 @@ body {
 
 .navbar .menu a {
   text-decoration: none;
-  color: #000000;
+  color: #fff;
   -webkit-transition-duration: .2s;
           transition-duration: .2s;
 }
 
 .navbar .menu a:hover {
-  color: #ff4500;
   font-size: 1.2rem;
 }
 
