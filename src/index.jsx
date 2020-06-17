@@ -3,7 +3,7 @@
 // MEMBUAT FUNC COMPONENT REACT
 const App = ()=>{
 
-    const waktu = new Date().toLocaleDateString()
+    const waktu = new Date().toLocaleTimeString()
     const dummyNote = [
         {
             id : 1,
@@ -25,20 +25,45 @@ const App = ()=>{
         }
     ]
 
+    const menu = [
+        {
+            id : 1,
+            menuName : 'UTAMA',
+            to : '#'
+        },
+        {
+            id : 2,
+            menuName : 'ABOUT',
+            to : '#'
+        },
+        {
+            id : 3,
+            menuName : 'CONTACT',
+            to : '#'
+        },
+        {
+            id : 4,
+            menuName : 'GALLERY',
+            to : '#'
+        },
 
+    ]
 
     return (
         <>
-        <div className="navbar" >
+        <div className="navbar">
             <h1 className="brand">
                 jvalley
             </h1>
 
             <div className="menu">
-                <a href="#">home</a>
-                <a href="#">about</a>
-                <a href="#">contact</a>
-                <a href="#">gallery</a>
+                
+                {  menu.map((e)=>{
+                    return(
+                    <a href={e.to} key={e.id}>{e.menuName}</a>
+                    )
+                })  }
+               
             </div>
         </div>
 
