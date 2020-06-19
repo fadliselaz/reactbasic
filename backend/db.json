@@ -1,0 +1,24 @@
+{
+    "notes" : [
+        {
+            "id" : 1,
+            "title" : "note pertama",
+            "content" : "ini adalah note pertama saya" 
+        },
+        {
+            "id" : 2,
+            "title" : "note kedua",
+            "content" : "ini adalah note kedua saya" 
+        },
+        {
+            "id" : 3,
+            "title" : "note ketiga",
+            "content" : "ini adalah note ketiga saya" 
+        },
+        {
+            "id" : 4,
+            "title" : "note keempat",
+            "content" : "ini adalah note keempat saya" 
+        }
+    ]
+}

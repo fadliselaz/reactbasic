@@ -4,7 +4,7 @@ const MenuItem = (props)=>{
 
     //Membuat sebuah Initial STATE
     const [click, setClick] = React.useState( false )
-    const [tc, setTc] = React.useState( 0 )
+    const [tc, setTc] = React.useState( 10 )
 
     return(
         <div className="menuItem" style={{
@@ -14,15 +14,15 @@ const MenuItem = (props)=>{
             display : 'flex',
             justifyContent : 'center',
             alignItems : 'center',
-            backgroundColor : click ? `${props.color}` : '#bebebe'
+            // backgroundColor : click ? `${props.color}` : '#bebebe'
         }} onClick={ ()=>{
             setClick( !click )
-            setTc( tc + 1 )
+            setTc( tc === 0 ? tc = 0 : tc - 1 )
             
         }  }>
 
             <a href={props.to}>
-                {props.menuName} &nbsp; {tc}
+                {props.menuName}
             </a>
         </div>
     )

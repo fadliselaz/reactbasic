@@ -3,55 +3,26 @@
 // MEMBUAT FUNC COMPONENT REACT
 const App = ()=>{
 
+    
+
     const waktu = new Date().toLocaleTimeString()
-    const dummyNote = [
-        {
-            id : 1,
-            title : 'ini note pertama',
-            content : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus totam eos id quam enim vitae, ipsa quos veniam velit ad. Provident officiis tempora deserunt, quis commodi cum! Recusandae, consequatur a.',
-            date : waktu
-        },
-        {
-            id : 2,
-            title : 'ini note kedua',
-            content : 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
-            date : waktu
-        },
-        {
-            id : 3,
-            title : 'ini note ketiga',
-            content : 'ini adalah note ketiga saya..',
-            date : waktu
-        }
-    ]
+    const [dummyNote, setDummyNote] = React.useState([])
 
-    const menu = [
-        {
-            id : 1,
-            menuName : 'UTAMA',
-            to : '#',
-            color : '#FFC300'
-        },
-        {
-            id : 2,
-            menuName : 'ABOUT',
-            to : '#',
-            color : '#FF5733'
-        },
-        {
-            id : 3,
-            menuName : 'CONTACT',
-            to : '#',
-            color : '#C70039'
-        },
-        {
-            id : 4,
-            menuName : 'GALLERY',
-            to : '#',
-            color : '#FFC300'
-        },
+    React.useEffect( ()=>{
 
-    ]
+        fetch('http://localhost:4000/notes/', {
+            method : 'GET',
+            mode : 'cors',
+            headers : {
+                "Content-Type" : "application/json"
+            }
+        })
+        .then(res => res.json())
+        .then(data => console.log(data))
+        
+
+    }, [] )
+    
 
     return (
         <>
@@ -61,23 +32,23 @@ const App = ()=>{
             </h1>
 
             <div className="menu">
-                
-                {menu.map((e)=>{
-                    return(
-                    <MenuItem menuName={e.menuName} to={e.to} color={e.color} key={e.id}/>
-                    )
-                })}
+    
                
             </div>
         </div>
 
         <div className="container">
 
-            {dummyNote.map( (e)=>{
-                return(
+            <NoteInput />
+
+            { dummyNote.map( (e)=>{  
+                
+                return (
                     <Card key={e.id} title={e.title} content={e.content} date={e.date}/>
                 )
-            })}
+                
+            }) }
+            
 
         </div>
 
@@ -89,6 +60,8 @@ const App = ()=>{
         </>
     )
 }
+
+
 
 // SELEKSI ELEMENT UNTUK PENEMPATAN RENDER
 const root = document.getElementById('root')
